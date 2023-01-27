@@ -1,9 +1,10 @@
 import "./App.css";
+import Login from "./pages/login/login";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">CRM Ticket System</h1>
+      <Login />
     </div>
   );
 }
