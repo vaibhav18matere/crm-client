@@ -2,15 +2,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="text-center lg:text-left bg-gray-100 text-gray-600">
-      <div class="flex justify-around items-center lg:justify-between p-6 border-b border-gray-300">
-        <div class="mr-12 hidden lg:block">
+    <footer className="text-center lg:text-left bg-gray-100 text-gray-600 absolute bottom-0 left-0 right-0">
+      <div className="flex justify-around items-center lg:justify-between p-6 border-b border-gray-300">
+        <div className="mr-12 hidden lg:block">
           <span>&copy; Falcon CRM | All rights reserved</span>
         </div>
-        <div class="flex justify-center">
+        <div className="flex justify-center">
           <a
             href="https://vaibhav-matere-portfolio-v2.vercel.app/"
-            class="mr-6 text-gray-600"
+            className="mr-6 text-gray-600"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -19,7 +19,7 @@ const Footer = () => {
               focusable="false"
               data-prefix="fab"
               data-icon="google"
-              class="w-3.5"
+              className="w-3.5"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 488 512"
@@ -34,14 +34,14 @@ const Footer = () => {
             href="https://twitter.com/vaibhav_matere"
             target="_blank"
             rel="noopener noreferrer"
-            class="mr-6 text-gray-600"
+            className="mr-6 text-gray-600"
           >
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="twitter"
-              class="w-4"
+              className="w-4"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -56,14 +56,14 @@ const Footer = () => {
             href="https://www.linkedin.com/in/vaibhavmatere/"
             target="_blank"
             rel="noopener noreferrer"
-            class="mr-6 text-gray-600"
+            className="mr-6 text-gray-600"
           >
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="linkedin-in"
-              class="w-3.5"
+              className="w-3.5"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -76,7 +76,7 @@ const Footer = () => {
           </a>
           <a
             href="https://github.com/vaibhav18matere"
-            class="text-gray-600"
+            className="text-gray-600"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -85,7 +85,7 @@ const Footer = () => {
               focusable="false"
               data-prefix="fab"
               data-icon="github"
-              class="w-4"
+              className="w-4"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"

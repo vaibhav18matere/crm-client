@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Dashboard from "../../pages/dashboard/Dashboard";
 
 const DefaultLayout = ({ children }) => {
   return (
@@ -8,7 +9,7 @@ const DefaultLayout = ({ children }) => {
       <Header />
       <main className="main">
         {children}
-        {/* dashboard page will be shown here */}
+        <Dashboard />
       </main>
       <Footer />
     </>
