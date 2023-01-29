@@ -3,6 +3,9 @@ import React from "react";
 const TicketsTable = ({ tickets }) => {
   return (
     <>
+      <h1 className="font-bold mb-4 ml-4 tracking-wide">
+        Recently Added Tickets :
+      </h1>
       <div className="flex flex-col">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -37,34 +40,31 @@ const TicketsTable = ({ tickets }) => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      1
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Mark
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Otto
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      mdo
-                    </td>
-                  </tr>
-                  <tr className="bg-white border-b">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      2
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Jacob
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Thornton
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      fat
-                    </td>
-                  </tr>
+                  {tickets.length ? (
+                    tickets.map((row) => (
+                      <tr
+                        className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100 cursor-pointer"
+                        key={row.id}
+                      >
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          {row.id}
+                        </td>
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          {row.subject}
+                        </td>
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          {row.status}
+                        </td>
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          {row.addedAt}
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <h1 className="leading-tight text-4xl text-center">
+                      No tickets to show here...
+                    </h1>
+                  )}
                 </tbody>
               </table>
             </div>

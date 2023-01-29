@@ -7,10 +7,8 @@ const DefaultLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="main">
-        {children}
-        <Dashboard />
-      </main>
+      {children}
+      <Dashboard />
       <Footer />
     </>
   );

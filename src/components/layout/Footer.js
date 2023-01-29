@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="text-center lg:text-left bg-gray-100 text-gray-600 absolute bottom-0 left-0 right-0">
+    <footer className="text-center lg:text-left bg-gray-100 text-gray-600">
       <div className="flex justify-around items-center lg:justify-between p-6 border-b border-gray-300">
         <div className="mr-12 hidden lg:block">
           <span>&copy; Falcon CRM | All rights reserved</span>
