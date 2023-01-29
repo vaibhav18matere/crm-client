@@ -1,19 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Login = ({
+const PasswordReset = ({
   handleOnChange,
-  handleSubmitForm,
+  handleResetForm,
   formSwitcher,
   email,
-  password,
 }) => {
   return (
-    <form autoComplete="off" onSubmit={handleSubmitForm}>
+    <form autoComplete="off" onSubmit={handleResetForm}>
       <div className="flex justify-center items-center h-screen bg-indigo-400">
         <div className="w-96 p-6 bg-white shadow-lg rounded-md">
           <h1 className="text-2xl font-bold tracking-wide block text-center">
-            Login
+            Reset Password
           </h1>
           <hr className="m-4" />
           <div className="mt-4">
@@ -32,35 +31,20 @@ const Login = ({
             />
           </div>
           <div className="mt-4">
-            <label className="block text-base" htmlFor="password">
-              Password :
-            </label>
-            <input
-              className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
-              id="password"
-              type="password"
-              name="password"
-              value={password}
-              placeholder="enter your password"
-              autoComplete="off"
-              onChange={handleOnChange}
-            />
-          </div>
-          <div className="mt-4">
             <button
               className="border-2 border-indigo-600 rounded-sm bg-indigo-600 w-full text-white py-1 hover:text-indigo-800 hover:bg-white"
               type="submit"
             >
-              Login
+              Reset Password
             </button>
           </div>
           <div className="flex align-middle justify-around mt-3">
             <a
               className="text-indigo-700 font-semibold"
               href="#!"
-              onClick={() => formSwitcher("reset")}
+              onClick={() => formSwitcher("login")}
             >
-              Forget password
+              Back to login page
             </a>
           </div>
         </div>
@@ -69,12 +53,11 @@ const Login = ({
   );
 };
 
-export default Login;
+export default PasswordReset;
 
-Login.propTypes = {
+PasswordReset.propTypes = {
   handleOnChange: PropTypes.func.isRequired,
-  handleSubmitForm: PropTypes.func.isRequired,
+  handleResetForm: PropTypes.func.isRequired,
   formSwitcher: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired,
 };
