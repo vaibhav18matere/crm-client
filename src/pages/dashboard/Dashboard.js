@@ -13,9 +13,9 @@ const Dashboard = () => {
           Add New Ticket
         </button>
       </div>
-      <div>
-        <h3 className="text-center">Total Tickets : 50</h3>
-        <h3 className="text-center">Pending Tickets : 5</h3>
+      <div className="flex flex-col align-middle place-items-end p-5 m-3">
+        <h3 className="font-bold tracking-wide">Total Tickets : 50</h3>
+        <h3 className="font-bold tracking-wide">Pending Tickets : 5</h3>
       </div>
       <TicketsTable tickets={tickets} />
     </>
