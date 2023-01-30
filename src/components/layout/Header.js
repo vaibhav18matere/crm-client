@@ -6,7 +6,9 @@ const Header = () => {
     <>
       <nav className="p-5 bg-indigo-400 shadow md:flex md:items-center md:justify-between tracking-widest">
         <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold cursor-pointer">Falcon CRM</span>
+          <span className="text-2xl font-bold hover:text-blue-700 cursor-pointer">
+            Falcon CRM
+          </span>
           <div
             onClick={() => setNavIconOpen(!navIconOpen)}
             className="text-3xl cursor-pointer md:hidden block mx-2"
@@ -20,17 +22,26 @@ const Header = () => {
           } `}
         >
           <li className="mx-5 my-6 md:my-0">
-            <a href="#!" className="text-xl hover:text-blue-700">
+            <a
+              href="#!"
+              className="text-xl tracking-wide font-bold hover:text-blue-700"
+            >
               Dashboard
             </a>
           </li>
           <li className="mx-5 my-6 md:my-0">
-            <a href="#!" className="text-xl hover:text-blue-700">
+            <a
+              href="#!"
+              className="text-xl tracking-wide font-bold hover:text-blue-700"
+            >
               Tickets
             </a>
           </li>
           <li className="mx-5 my-6 md:my-0">
-            <a href="#!" className="text-xl hover:text-blue-700">
+            <a
+              href="#!"
+              className="text-xl tracking-wide font-bold hover:text-blue-700"
+            >
               Layout
             </a>
           </li>

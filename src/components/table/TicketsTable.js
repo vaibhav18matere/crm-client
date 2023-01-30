@@ -46,16 +46,16 @@ const TicketsTable = ({ tickets }) => {
                         className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100 cursor-pointer"
                         key={row.id}
                       >
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           {row.id}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           {row.subject}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           {row.status}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           {row.addedAt}
                         </td>
                       </tr>
