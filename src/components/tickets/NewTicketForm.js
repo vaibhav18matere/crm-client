@@ -20,8 +20,8 @@ const NewTicketForm = ({
               name="subject"
               value={ticketFormData.subject}
               onChange={handleOnChangeTicket}
-              className="form-control w-full px-3 py-1.5 my-1.5 text-base border border-solid border-gray-300 bg-white bg-clip-padding text-gray-700 font-normal rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              placeholder="Enter Ticket Title"
+              className="form-control w-full px-3 py-1.5 my-1.5 text-base border border-solid border-gray-300 bg-white bg-clip-padding text-gray-700 font-normal rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-indigo-600 focus:outline-none"
+              placeholder="enter ticket title"
               minLength="5"
               maxLength="80"
               required
@@ -46,15 +46,15 @@ const NewTicketForm = ({
               name="details"
               value={ticketFormData.details}
               onChange={handleOnChangeTicket}
-              className="form-control w-full px-3 py-1.5 my-1.5  text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-indigo-600 focus:outline-none"
+              className="form-control w-full px-3 py-1.5 my-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-indigo-600 focus:outline-none"
               rows="5"
-              placeholder="Provide more information about the bugs, issue you found"
+              placeholder="provide more information about the bugs, issue you found"
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full px-3 py-1.5 bg-indigo-400 font-medium text-md leading-tight uppercase rounded shadow-md hover:bg-indigo-400 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-700 active:shadow-lg transition duration-150 ease-in-out"
+            className="w-full px-3 py-1.5 bg-indigo-600 text-white font-medium text-md uppercase rounded shadow-md focus:bg-indigo-700 tracking-wider"
           >
             Raise A Ticket
           </button>
