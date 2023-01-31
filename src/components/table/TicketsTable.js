@@ -15,25 +15,25 @@ const TicketsTable = ({ tickets }) => {
                   <tr>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
                       Ticket ID
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
                       Subjects
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
                       Ticket Status
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      className="text-md font-bold text-gray-900 px-6 py-4 text-left"
                     >
                       Ticket Opened Date
                     </th>
