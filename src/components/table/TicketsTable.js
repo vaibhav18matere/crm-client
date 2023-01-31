@@ -15,25 +15,25 @@ const TicketsTable = ({ tickets }) => {
                   <tr>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
                       Ticket ID
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
                       Subjects
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
                       Ticket Status
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                      className="text-md font-bold text-gray-900 px-6 py-4 text-left"
                     >
                       Ticket Opened Date
                     </th>
@@ -61,7 +61,7 @@ const TicketsTable = ({ tickets }) => {
                       </tr>
                     ))
                   ) : (
-                    <h1 className="leading-tight text-4xl text-center">
+                    <h1 className="leading-tight text-5xl text-center text-indigo-600 font-semibold tracking-wider p-3">
                       No tickets to show here...
                     </h1>
                   )}
