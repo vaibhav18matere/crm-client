@@ -1,15 +1,27 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import SearchForm from "../../components/search-form/SearchForm";
+import TicketsTable from "../../components/table/TicketsTable";
+import tickets from "./../../assets//data/dummyticket.json";
 
 const TicketList = () => {
   const [str, setStr] = useState("");
+  const [displayTickets, setDisplayTickets] = useState(tickets);
 
   const searchOnchange = (e) => {
-    //console.log(e.target.value);
-    setStr(e.target.value);
+    const { value } = e.target;
+    setStr(value);
+    searchTicket(value);
   };
 
-  useEffect(() => {}, [str]);
+  useEffect(() => {}, [str, displayTickets]);
+
+  const searchTicket = (strInput) => {
+    const showTickets = tickets.filter((row) =>
+      row.subject.toLowerCase().includes(strInput.toLowerCase())
+    );
+    setDisplayTickets(showTickets);
+  };
 
   return (
     <>
@@ -20,8 +32,13 @@ const TicketList = () => {
         Add New Ticket
       </button>
       <SearchForm searchOnchange={searchOnchange} str={str} />
+      <TicketsTable tickets={displayTickets} />
     </>
   );
 };
 
 export default TicketList;
+
+TicketList.propTypes = {
+  tickets: PropTypes.array,
+};
