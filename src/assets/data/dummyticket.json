@@ -8,16 +8,16 @@
       {
         "date": "23-01-29",
         "message": "add homepage layout",
-        "messageBy": "client"
+        "messageBy": "user"
       },
       {
         "date": "2023-01-30",
-        "message": "report bug",
+        "message": "report a UI bug",
         "messageBy": "operator"
       },
       {
         "date": "23-01-31",
-        "message": "add routers",
+        "message": "add react routers to navigate",
         "messageBy": "client"
       }
     ]

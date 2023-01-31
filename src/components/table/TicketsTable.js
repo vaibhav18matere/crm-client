@@ -61,7 +61,7 @@ const TicketsTable = ({ tickets }) => {
                       </tr>
                     ))
                   ) : (
-                    <h1 className="leading-tight text-4xl text-center">
+                    <h1 className="leading-tight text-5xl text-center text-indigo-600 font-semibold tracking-wider p-3">
                       No tickets to show here...
                     </h1>
                   )}
