@@ -3,9 +3,6 @@ import React from "react";
 const TicketsTable = ({ tickets }) => {
   return (
     <>
-      <h1 className="font-bold mb-4 ml-4 tracking-wide">
-        Recently Added Tickets :
-      </h1>
       <div className="flex flex-col">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -17,25 +14,25 @@ const TicketsTable = ({ tickets }) => {
                       scope="col"
                       className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
-                      Ticket ID
+                      ID
                     </th>
                     <th
                       scope="col"
                       className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
-                      Subjects
+                      Subject
                     </th>
                     <th
                       scope="col"
                       className="text-md font-bold tracking-wide text-gray-900 px-6 py-4 text-left"
                     >
-                      Ticket Status
+                      Status
                     </th>
                     <th
                       scope="col"
                       className="text-md font-bold text-gray-900 px-6 py-4 text-left"
                     >
-                      Ticket Opened Date
+                      Issue Date
                     </th>
                   </tr>
                 </thead>

@@ -48,7 +48,7 @@ const Login = ({
           </div>
           <div className="mt-4">
             <button
-              className="border-2 border-indigo-600 rounded-sm bg-indigo-600 w-full text-white py-1 hover:text-indigo-800 hover:bg-white"
+              className="border-2 border-indigo-600 rounded-sm bg-indigo-600 w-full text-white py-1 hover:text-indigo-800 hover:bg-white tracking-widest"
               type="submit"
             >
               Login
