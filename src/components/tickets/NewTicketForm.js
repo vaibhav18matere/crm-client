@@ -54,9 +54,9 @@ const NewTicketForm = ({
           </div>
           <button
             type="submit"
-            className="w-full px-3 py-1.5 bg-indigo-600 text-white font-medium text-md uppercase rounded shadow-md focus:bg-indigo-700 tracking-wider"
+            className="w-full px-3 py-1.5 bg-indigo-600 text-white font-medium text-md uppercase rounded shadow-md focus:bg-indigo-700 tracking-widest"
           >
-            Raise A Ticket
+            🔺Raise A Ticket
           </button>
         </form>
       </div>
