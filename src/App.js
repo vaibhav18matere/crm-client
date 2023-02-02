@@ -1,12 +1,27 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/login/Homepage";
-import DefaultLayout from "./components/layout/DefaultLayout";
-
+import Dashboard from "./pages/dashboard/Dashboard";
+import NewTicket from "./pages/tickets/NewTicket";
+import TicketList from "./pages/tickets-list/TicketList";
+import TicketDetails from "./pages/tickets//TicketDetails";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 function App() {
   return (
     <div className="App">
-      <Homepage />
-      <DefaultLayout />
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/add-tickets" element={<NewTicket />} />
+          <Route path="/tickets" element={<TicketList />} />
+          <Route path="/tickets/:tId" element={<TicketDetails />} />
+          <Route path="*" element={<h1>Error 404 ! Page not found</h1>} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }

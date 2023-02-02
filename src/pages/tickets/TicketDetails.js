@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import tickets from "./../../assets/data/dummyticket.json";
 import TicketHistory from "../../components/ticket-history/TicketHistory";
 import TicketUpdate from "../../components/ticket-update/TicketUpdate";
 
-const ticket = tickets[0];
-
 const TicketDetails = () => {
-  const [message, setMessage] = useState("");
+  const { tId } = useParams();
 
-  useEffect(() => {}, [message]);
+  const [message, setMessage] = useState("");
+  const [ticket, setTicket] = useState("");
+
+  useEffect(() => {
+    for (let i = 0; i < tickets.length; i++) {
+      if (tickets[i].id == tId) {
+        setTicket(tickets[i]);
+        continue;
+      }
+    }
+  }, [message, tId]);
 
   const handleOnUpdateTicket = (e) => {
     setMessage(e.target.value);
@@ -29,16 +38,16 @@ const TicketDetails = () => {
           ❌ Close Ticket
         </button>
       </div>
-      <div className="text-md font-bold tracking-wide text-gray-900 px-6 py-1 text-left">
-        subject : {ticket.subject}
+      <div className="text-md tracking-wider text-gray-900 px-6 py-1 text-left">
+        Ticket Subject : {ticket.subject}
       </div>
-      <div className="text-md font-bold tracking-wide text-gray-900 px-6 py-1 text-left">
-        status : {ticket.status}
+      <div className="text-md tracking-wider text-gray-900 px-6 py-1 text-left">
+        Ticket Status : {ticket.status}
       </div>
-      <div className="text-md font-bold tracking-wide text-gray-900 px-6 py-1 text-left">
-        added at : {ticket.addedAt}
+      <div className="text-md tracking-wider text-gray-900 px-6 py-1 text-left">
+        Ticket Added At : {ticket.addedAt}
       </div>
-      <TicketHistory msg={ticket.history} />
+      {ticket.history && <TicketHistory msg={ticket.history} />}
       <TicketUpdate
         message={message}
         handleOnUpdateTicket={handleOnUpdateTicket}
