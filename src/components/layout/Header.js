@@ -1,14 +1,25 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const [navIconOpen, setNavIconOpen] = useState(false);
+
+  const loggedOut = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <nav className="p-5 bg-indigo-400 shadow md:flex md:items-center md:justify-between tracking-widest">
         <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold hover:text-blue-700 cursor-pointer">
+          <Link
+            to="/"
+            className="text-2xl font-bold hover:text-blue-700 cursor-pointer"
+          >
             Falcon CRM
-          </span>
+          </Link>
           <div
             onClick={() => setNavIconOpen(!navIconOpen)}
             className="text-3xl cursor-pointer md:hidden block mx-2"
@@ -22,28 +33,29 @@ const Header = () => {
           } `}
         >
           <li className="mx-5 my-6 md:my-0">
-            <a
-              href="#!"
+            <Link
+              to="/dashboard"
               className="text-xl tracking-wide font-bold hover:text-blue-700"
             >
               Dashboard
-            </a>
+            </Link>
           </li>
           <li className="mx-5 my-6 md:my-0">
-            <a
-              href="#!"
+            <Link
+              to="/tickets"
               className="text-xl tracking-wide font-bold hover:text-blue-700"
             >
               Tickets
-            </a>
+            </Link>
           </li>
           <li className="mx-5 my-6 md:my-0">
-            <a
-              href="#!"
+            <Link
+              to="/"
               className="text-xl tracking-wide font-bold hover:text-blue-700"
+              onClick={loggedOut}
             >
-              Layout
-            </a>
+              Logout
+            </Link>
           </li>
         </ul>
       </nav>

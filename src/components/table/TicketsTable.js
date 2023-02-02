@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TicketsTable = ({ tickets }) => {
   return (
@@ -47,7 +48,7 @@ const TicketsTable = ({ tickets }) => {
                           {row.id}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          {row.subject}
+                          <Link to={`/tickets/${row.id}`}>{row.subject}</Link>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           {row.status}
@@ -58,9 +59,13 @@ const TicketsTable = ({ tickets }) => {
                       </tr>
                     ))
                   ) : (
-                    <h1 className="leading-tight text-5xl text-center text-indigo-600 font-semibold tracking-wider p-3">
-                      No tickets to show here...
-                    </h1>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <h1 className="leading-tight text-5xl text-center text-indigo-600 font-semibold tracking-wider p-3">
+                          No tickets to show here...
+                        </h1>
+                      </td>
+                    </tr>
                   )}
                 </tbody>
               </table>

@@ -6,7 +6,7 @@ const TicketHistory = ({ msg }) => {
 
   return msg.map((row, index) => (
     <div key={index} className="container mx-auto">
-      <div className="max-w-2xl border rounded">
+      <div className="max-w-xl border rounded my-3">
         <div className="p-4">
           <ul className="space-y-2">
             <li className="flex justify-start">

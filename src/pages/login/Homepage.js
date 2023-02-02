@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
 import Login from "./login";
 import PasswordReset from "../reset-password/PasswordReset";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Homepage = () => {
   const [email, setEmail] = useState("");
