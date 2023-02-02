@@ -3,22 +3,22 @@
     "id": 1,
     "subject": "Error 404 - Not found",
     "status": "Requested resource does not exist",
-    "addedAt": "20203-01-30",
+    "addedAt": "2023-01-02",
     "history": [
       {
-        "date": "23-01-29",
-        "message": "add homepage layout",
-        "messageBy": "user"
+        "date": "2022-12-29",
+        "message": "Add Homepage Layout",
+        "messageBy": "User"
       },
       {
-        "date": "2023-01-30",
-        "message": "report a UI bug",
-        "messageBy": "operator"
+        "date": "2022-12-22",
+        "message": "Report UI Bug",
+        "messageBy": "Operator"
       },
       {
-        "date": "23-01-31",
-        "message": "add react routers to navigate",
-        "messageBy": "client"
+        "date": "2022-12-20",
+        "message": "Add React Routers to Navbar",
+        "messageBy": "Client"
       }
     ]
   },
@@ -30,13 +30,13 @@
   },
   {
     "id": 3,
-    "subject": "Issue app crashing",
+    "subject": "Issue App Crashing",
     "status": "URL String Syntax Error",
     "addedAt": "2023-01-18"
   },
   {
     "id": 4,
-    "subject": "Issue with sensors data",
+    "subject": "Issue With Sensors Data",
     "status": "File Size Too Large",
     "addedAt": "2023-01-11"
   },
@@ -44,7 +44,24 @@
     "id": 5,
     "subject": "Issue with json file",
     "status": "Corrupted Browser Cache & Cookies",
-    "addedAt": "2023-01-05"
+    "addedAt": "2023-01-05",
+        "history": [
+      {
+        "date": "2022-04-29",
+        "message": "Cookies Timeout",
+        "messageBy": "Operator"
+      },
+      {
+        "date": "2022-04-22",
+        "message": "Redirect and savings issue on cookies",
+        "messageBy": "Client"
+      },
+      {
+        "date": "2022-04-20",
+        "message": "Some issue in saving",
+        "messageBy": "User"
+      }
+    ]
   },
   {
     "id": 6,
@@ -74,6 +91,23 @@
     "id": 10,
     "subject": "Unauthorized App or User",
     "status": "Corrupted or broken .htaccess file",
-    "addedAt": "2022-08-18"
+    "addedAt": "2022-06-25",
+        "history": [
+      {
+        "date": "2022-06-19",
+        "message": "Files Are Not Opening",
+        "messageBy": "Operator"
+      },
+      {
+        "date": "2022-06-18",
+        "message": "Redirecting To Login Page",
+        "messageBy": "User"
+      },
+      {
+        "date": "2022-06-16",
+        "message": "I Cannot access the data",
+        "messageBy": "Client"
+      }
+    ]
   }
 ]
