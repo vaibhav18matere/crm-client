@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -14,12 +14,15 @@ const Header = () => {
     <>
       <nav className="p-5 bg-indigo-400 shadow md:flex md:items-center md:justify-between tracking-widest">
         <div className="flex justify-between items-center">
-          <Link
-            to="/"
+          <NavLink
+            style={({ isActive }) => {
+              return isActive ? { color: "black" } : {};
+            }}
+            to="/dashboard"
             className="text-2xl font-bold hover:text-blue-700 cursor-pointer"
           >
             Falcon CRM
-          </Link>
+          </NavLink>
           <div
             onClick={() => setNavIconOpen(!navIconOpen)}
             className="text-3xl cursor-pointer md:hidden block mx-2"
@@ -33,29 +36,38 @@ const Header = () => {
           } `}
         >
           <li className="mx-5 my-6 md:my-0">
-            <Link
+            <NavLink
+              style={({ isActive }) => {
+                return isActive ? { color: "blue" } : {};
+              }}
               to="/dashboard"
               className="text-xl tracking-wide font-bold hover:text-blue-700"
             >
               Dashboard
-            </Link>
+            </NavLink>
           </li>
           <li className="mx-5 my-6 md:my-0">
-            <Link
+            <NavLink
+              style={({ isActive }) => {
+                return isActive ? { color: "blue" } : {};
+              }}
               to="/tickets"
               className="text-xl tracking-wide font-bold hover:text-blue-700"
             >
               Tickets
-            </Link>
+            </NavLink>
           </li>
           <li className="mx-5 my-6 md:my-0">
-            <Link
+            <NavLink
+              style={({ isActive }) => {
+                return isActive ? { color: "blue" } : {};
+              }}
               to="/"
               className="text-xl tracking-wide font-bold hover:text-blue-700"
               onClick={loggedOut}
             >
               Logout
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
