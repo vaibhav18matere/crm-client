@@ -7,6 +7,7 @@ import TicketList from "./pages/tickets-list/TicketList";
 import TicketDetails from "./pages/tickets//TicketDetails";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import NotFound from "./components/page-not-found/NotFound";
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function App() {
           <Route path="/add-tickets" element={<NewTicket />} />
           <Route path="/tickets" element={<TicketList />} />
           <Route path="/tickets/:tId" element={<TicketDetails />} />
-          <Route path="*" element={<h1>Error 404 ! Page not found</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
