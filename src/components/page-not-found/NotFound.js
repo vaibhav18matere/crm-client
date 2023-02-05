@@ -8,7 +8,7 @@ const NotFound = () => {
     setTimeout(() => {
       navigate(-1);
     }, 3000);
-  }, []);
+  });
 
   return (
     <>
